@@ -4,12 +4,7 @@ A node.js library for the SurveyMonkey API
 
 _node-surveymonkey_ exposes the following features of the SurveyMonkey API to your node.js application:
  
- * SurveyMonkey API (Versions 1.3, 1.2 and 1.1)
- * SurveyMonkey Export API (Version 1.0)
- * SurveyMonkey Webhooks
- * SurveyMonkey STS API (Version 1.0)
- * SurveyMonkey OAuth2 authorization
- * Mandrill API (Version 1.0)
+ * SurveyMonkey API (Versions v2)
 
 Further information on the SurveyMonkey API and its features is available at [https://developer.surveymonkey.com](https://developer.surveymonkey.com)
 
@@ -60,37 +55,6 @@ api.getSurveyList({ title: 'some_title', page_size: 25 }, function (error, data)
         console.log(JSON.stringify(data)); // Do something with your data!
 });
 
-```
-    
-### SurveyMonkey Export API
-
-_SurveyMonkeyExportAPI_ takes two arguments. The first argument is your API key, which you can find in your SurveyMonkey Account. The second argument is an options object which can contain the following options:
-
- * `version` The Export API version to use, currently only 1.0 is available and supported. Defaults to 1.0.
- * `secure` Whether or not to use secure connections over HTTPS (true/false). Defaults to false.
- * `userAgent` Custom User-Agent description to use in the request header.
- 
-The callback function for each API method gets two arguments. The first one is an error object which is null when no error occured, the second one an object with all information retrieved as long as no error occured. 
-
-Example:
-
-```javascript
-var SurveyMonkeyExportAPI = require('surveymonkey').SurveyMonkeyExportAPI;
-
-var apiKey = 'Your SurveyMonkey API Key';
-
-try { 
-    var exportApi = new SurveyMonkeyExportAPI(apiKey, { version : '1.0', secure: false });
-} catch (error) {
-    console.log(error.message);
-}
-
-exportApi.list({ id : '/* LIST ID */'  }, function (error, data) {
-    if (error)
-        console.log(error.message);
-    else
-        console.log(JSON.stringify(data)); // Do something with your data!
-});
 ```
   
 ## License
