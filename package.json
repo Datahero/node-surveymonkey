@@ -5,7 +5,7 @@
   "author": {
     "name": "Jeff Zabel",
     "company": "Datahero, Inc.",
-    "email": "jeff@data-hero.com"
+    "email": "jeff@datahero.com"
   },
   "main": "./lib/surveymonkey",
   "repository": {
@@ -13,7 +13,6 @@
     "url": "https://github.com/Datahero/surveymonkey.git"
   },
   "dependencies": {
-    "request": "2.x.x",
-    "qs": "0.5.x"
+    "request": "2.x.x"
   }
 }
