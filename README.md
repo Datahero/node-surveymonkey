@@ -27,7 +27,10 @@ Information on how to use the SurveyMonkey APIs can be found below. Further info
 
 ### SurveyMonkey API
 
-_SurveyMonkeyAPI_ takes two arguments. The first argument is your API key, which you can find in your SurveyMonkey Account. The second argument is an options object which can contain the following options:
+_SurveyMonkeyAPI_ takes three arguments. There are two ways to authenticate with the api.  You can either use a SurveyMonkey API key, or you can use an oAuth token.
+1. The first argument is your API key, which you can find in your SurveyMonkey Account. 
+2. The second argument is your oAuth token if you are using oAuth for a particular user.  Leave null if you are just accessing with your API key.
+3. The third argument is an options object which can contain the following options:
 
  * `version` The API version to use. Defaults to v2.
  * `secure` Whether or not to use secure connections over HTTPS (true/false). Defaults to false.
