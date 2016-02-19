@@ -44,9 +44,10 @@ Example:
 var SurveyMonkeyAPI = require('surveymonkey').SurveyMonkeyAPI;
 
 var apiKey = 'Your SurveyMonkey API Key';
+var accessToken = 'Your SurveyMonkey App Access Token';
 
 try { 
-    var api = new SurveyMonkeyAPI(apiKey, { version : 'v2', secure : false });
+    var api = new SurveyMonkeyAPI(apiKey, accessToken, { version : 'v2', secure : false });
 } catch (error) {
     console.log(error.message);
 }
