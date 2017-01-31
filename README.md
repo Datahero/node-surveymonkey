@@ -52,13 +52,20 @@ try {
     console.log(error.message);
 }
 
-api.getSurveyList({ title: 'some_title', page_size: 25 }, function (error, data) {
+api.getSurveyList({}, function (error, data) {
     if (error)
         console.log(error.message);
     else
         console.log(JSON.stringify(data)); // Do something with your data!
 });
 
+// or with a survey id
+api.getSurveyDetails({id:'113260729'},function (error, data) {
+    if (error)
+        console.log(error);
+    else
+        console.log(JSON.stringify(data)); // Do something with your data!
+});
 ```
   
 ## License
